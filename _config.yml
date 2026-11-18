@@ -1,0 +1,18 @@
+title: Maxine 的博客
+description: 记录学习、工具与实践。
+url: "https://maxine001mwq.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+theme: minima
+future: false
+permalink: /posts/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+header_pages:
+  - archive.html
+  - about.md
+exclude:
+  - README.md
