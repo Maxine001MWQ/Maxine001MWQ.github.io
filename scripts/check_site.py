@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse, unquote
 import xml.etree.ElementTree as ET
+import re
 
 root = Path('_site')
 assert root.is_dir(), 'Build the Jekyll site first.'
@@ -38,7 +39,15 @@ def resolve(url, source=None):
     if target.is_dir(): target = target / 'index.html'
     return target
 
-pages = {file: Page(file) for file in root.rglob('*.html')}
+verification_files = set()
+for source in Path('.').glob('google*.html'):
+    if re.fullmatch(r'google[0-9a-f]+\.html', source.name):
+        built = root / source.name
+        assert built.exists(), f'Missing Google verification file: {source}'
+        assert source.read_text().strip() == f'google-site-verification: {source.name}', f'Invalid verification content: {source}'
+        assert built.read_bytes() == source.read_bytes(), f'Changed verification file: {source}'
+        verification_files.add(built)
+pages = {file: Page(file) for file in root.rglob('*.html') if file not in verification_files}
 legacy = root / 'how-to-turn-scattered-career-notes-into-a-resume-with-notegpt/index.html'
 assert legacy.exists(), 'Missing legacy English article URL'
 pages[legacy] = Page(legacy)
