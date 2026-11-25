@@ -13,11 +13,13 @@ class Page(HTMLParser):
         self.file, self.lang, self.canonical = file, None, None
         self.links, self.alternates, self.ids = [], {}, set()
         self.h1 = 0
+        self.redirect = False
         self.feed(file.read_text(encoding='utf-8'))
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'html': self.lang = a.get('lang')
         if tag == 'h1': self.h1 += 1
+        if tag == 'meta' and a.get('http-equiv', '').lower() == 'refresh': self.redirect = True
         if a.get('id'):
             assert a['id'] not in self.ids, f'Duplicate ID: {self.file}: {a["id"]}'
             self.ids.add(a['id'])
@@ -43,7 +45,10 @@ pages[legacy] = Page(legacy)
 for file, page in pages.items():
     assert page.lang in ('zh-CN', 'en'), f'Missing language: {file}'
     assert page.canonical, f'Missing canonical: {file}'
-    if '/zh/' in str(file) or '/en/' in str(file):
+    if page.redirect:
+        target = resolve(page.canonical)
+        assert target in pages and not pages[target].redirect, f'Invalid or chained redirect: {file}'
+    elif '/zh/' in str(file) or '/en/' in str(file):
         assert page.h1 == 1, f'Expected one main heading: {file}'
     for link in page.links:
         target = resolve(link, file)
