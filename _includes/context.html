@@ -1,0 +1,12 @@
+{%- assign language = page.lang | default: site.lang -%}
+{%- assign t = site.data.translations[language] -%}
+{%- assign prefix = '/zh' -%}{%- assign other_language = 'en' -%}{%- assign other_prefix = '/en' -%}
+{%- if language == 'en' -%}{%- assign prefix = '/en' -%}{%- assign other_language = 'zh-CN' -%}{%- assign other_prefix = '/zh' -%}{%- endif -%}
+{%- assign local_posts = site.posts | where: 'lang', language -%}
+{%- assign counterpart = nil -%}
+{%- if page.translation_key -%}
+  {%- assign candidates = site.pages | concat: site.posts -%}
+  {%- for candidate in candidates -%}
+    {%- if candidate.translation_key == page.translation_key and candidate.lang == other_language -%}{%- assign counterpart = candidate -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

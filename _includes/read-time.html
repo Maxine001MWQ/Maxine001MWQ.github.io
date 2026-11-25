@@ -1,0 +1,4 @@
+{%- assign plain = include.post.content | strip_html | normalize_whitespace -%}
+{%- if language == 'en' -%}{%- assign units = plain | number_of_words -%}{%- assign minutes = units | plus: 219 | divided_by: 220 -%}
+{%- else -%}{%- assign units = plain | size -%}{%- assign minutes = units | plus: 399 | divided_by: 400 -%}{%- endif -%}
+{{- minutes | at_least: 1 }} {{ t.minutes }}

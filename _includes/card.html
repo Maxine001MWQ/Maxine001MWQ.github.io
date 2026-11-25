@@ -1,0 +1,7 @@
+<article class="post-card" data-category="{{ include.post.categories | first | escape }}">
+{% if include.post.image %}<img class="card-image" src="{{ include.post.image | relative_url }}" alt="{{ include.post.image_alt | escape }}" loading="lazy">{% endif %}
+<div class="card-content"><span class="category-label">{% assign category = include.post.categories | first %}{{ site.data.categories[category][language] | default: category }}</span>
+<h2><a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h2>
+<p class="card-description">{{ include.post.description | escape }}</p>
+<div class="post-meta"><span>{% include date.html date=include.post.date %}</span><span>{% include read-time.html post=include.post %}</span></div></div>
+</article>

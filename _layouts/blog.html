@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% include context.html %}
+<header class="page-heading"><p class="eyebrow">MAXINE’S NOTES</p><h1>{{ t.blog }}</h1><p>{{ t.blogintro }}</p></header>
+<div class="filters" role="group" aria-label="{{ t.filter }}" hidden><button class="filter active" data-filter="all" aria-pressed="true">{{ t.all }} <span>{{ local_posts.size }}</span></button>{% for entry in site.data.categories %}{% assign category_posts = local_posts | where_exp: 'post', 'post.categories contains entry[0]' %}{% if category_posts.size > 0 %}<button class="filter" data-filter="{{ entry[0] }}" aria-pressed="false">{{ entry[1][language] }} <span>{{ category_posts.size }}</span></button>{% endif %}{% endfor %}</div>
+<div class="post-grid blog-grid">{% for post in local_posts %}{% include card.html post=post %}{% endfor %}</div><p id="filter-empty" role="status" hidden>{{ t.empty }}</p>
+<section class="archive section"><h2>{{ t.archive }}</h2>{% assign groups = local_posts | group_by_exp: 'post', "post.date | date: '%Y'" %}{% for group in groups %}<div class="archive-year"><h3>{{ group.name }}</h3><ul>{% for post in group.items %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m-%d' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}</ul></div>{% endfor %}</section>

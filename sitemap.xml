@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% assign documents = site.pages | concat: site.posts %}{% for document in documents %}{% if document.translation_key %}<url><loc>{{ document.url | absolute_url }}</loc>{% if document.updated or document.date %}<lastmod>{{ document.updated | default: document.date | date_to_xmlschema }}</lastmod>{% endif %}</url>{% endif %}{% endfor %}</urlset>

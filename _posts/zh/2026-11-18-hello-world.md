@@ -1,9 +1,15 @@
 ---
 layout: post
 title: "你好，欢迎来到我的博客"
+description: "从记录开始，留下学习、工具体验与实践中的收获。"
 date: 2026-11-18 00:00:00 +0800
-categories: 随笔
+lang: zh-CN
+translation_key: hello-world
+permalink: /zh/posts/hello-world/
+categories: [reflections]
+tags: [writing]
 ---
+
 
 这是这个博客的第一篇文章，也是一个新的开始。
 

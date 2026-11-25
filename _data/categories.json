@@ -1,0 +1,14 @@
+{
+  "tools": {
+    "zh-CN": "工具与工作流",
+    "en": "Tools & Workflows"
+  },
+  "learning": {
+    "zh-CN": "学习与实践",
+    "en": "Learning & Practice"
+  },
+  "reflections": {
+    "zh-CN": "随笔与观察",
+    "en": "Notes & Reflections"
+  }
+}

@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% include context.html %}
+<article class="article"><header class="article-header"><a class="breadcrumb" href="{{ prefix | append: '/blog/' | relative_url }}">{{ t.blog }}</a><span class="breadcrumb-divider">/</span><span class="category-label">{% assign category = page.categories | first %}{{ site.data.categories[category][language] | default: category }}</span><h1>{{ page.title | escape }}</h1><p class="article-description">{{ page.description | escape }}</p><div class="post-meta"><span>{{ t.published }} {% include date.html date=page.date %}</span>{% if page.updated %}<span>{{ t.updated }} {% include date.html date=page.updated %}</span>{% endif %}<span>{% include read-time.html post=page %}</span></div><div class="translation-note">{% if counterpart %}<a href="{{ counterpart.url | relative_url }}" lang="{{ other_language }}">{% if language == 'en' %}阅读中文版{% else %}Read in English{% endif %}</a>{% else %}<span>{{ t.missing }}</span><a href="{{ other_prefix | append: '/blog/' | relative_url }}">{{ t.otherblog }}</a>{% endif %}</div></header>
+<div class="article-body"><aside class="toc" hidden><details open><summary>{{ t.toc }}</summary><nav aria-label="{{ t.toc }}"><ol id="toc-list"></ol></nav></details></aside><div class="prose" id="article-content">{{ content }}</div></div>
+<div class="article-end"><a href="{{ prefix | append: '/blog/' | relative_url }}">{{ t.back }}</a><a href="#main">{{ t.top }}</a></div></article>
+{% assign related = local_posts | where_exp: 'post', 'post.url != page.url' %}{% if related.size > 0 %}<section class="section related"><h2>{{ t.related }}</h2><div class="post-grid">{% for post in related limit: 2 %}{% include card.html post=post %}{% endfor %}</div></section>{% endif %}

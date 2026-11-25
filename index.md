@@ -1,8 +1,6 @@
 ---
-layout: home
-title: 首页
+layout: redirect
+permalink: /
+redirect_to: /zh/
+title: 进入中文首页
 ---
-
-# 思考、记录、分享。
-
-欢迎来到 Maxine 的博客。这里用来记录学习笔记、工具体验与实践心得。
