@@ -9,7 +9,11 @@ permalink: /zh/posts/best-gamma-alternatives-2027/
 categories: [tools]
 tags: [ai, notegpt, ppt]
 featured: false
+image: /assets/images/posts/best-gamma-alternatives-2027/ai-slides-red-white.png
+image_alt: "红白色资料卡片汇聚成可编辑演示文稿的无文字插画"
 ---
+
+![红白色资料卡片汇聚成可编辑演示文稿的无文字插画](/assets/images/posts/best-gamma-alternatives-2027/ai-slides-red-white.png)
 
 一句话结论：选 Gamma 替代品，别只看生成效果，重点看导出的 PPTX 到底能不能改。
 
