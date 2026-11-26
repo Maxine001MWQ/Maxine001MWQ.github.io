@@ -4,6 +4,10 @@ from pathlib import Path
 from urllib.parse import urlparse, unquote
 import xml.etree.ElementTree as ET
 import re
+import os
+
+site_url = urlparse(os.environ.get('CI_PAGES_URL', 'https://maxine001mwq.github.io'))
+baseurl = site_url.path.rstrip('/')
 
 root = Path('_site')
 assert root.is_dir(), 'Build the Jekyll site first.'
@@ -32,8 +36,11 @@ class Page(HTMLParser):
 def resolve(url, source=None):
     parts = urlparse(url)
     if parts.scheme and parts.scheme not in ('http', 'https'): return None
-    if parts.netloc and parts.netloc != 'maxine001mwq.github.io': return None
+    if parts.netloc and parts.netloc != site_url.netloc: return None
     path = unquote(parts.path)
+    if baseurl and path.startswith('/'):
+        assert path == baseurl or path.startswith(baseurl + '/'), f'Link outside site base path: {url}'
+        path = path[len(baseurl):] or '/'
     target = root / path.lstrip('/') if path.startswith('/') else (source.parent / path if source else root / path)
     if not path and source: target = source
     if target.is_dir(): target = target / 'index.html'

@@ -22,6 +22,12 @@ python3 scripts/check_site.py
 
 GitHub Pages 可继续使用现有 Jekyll 分支构建方式，无需切换托管服务。项目使用共享 Liquid 模板，不依赖自定义插件。修改文件不会自动提交或推送；推送到 Pages 配置的发布分支后由 GitHub 构建。实际分支与发布目录以仓库 Settings → Pages 为准。
 
+## GitLab Pages 发布
+
+仓库包含 `.gitlab-ci.yml`，推送到 GitLab 默认分支后自动构建并发布 `_site/`。
+流水线通过 `CI_PAGES_URL` 自动设置站点地址和子路径，不修改 GitHub Pages 的默认配置。
+构建成功后在 GitLab 的 Deploy → Pages 查看实际网址。
+
 ## 写一篇文章
 
 中文文件存入 `_posts/zh/YYYY-MM-DD-article-slug.md`，英文存入 `_posts/en/`。推荐复制以下模板，日期改成实际发布日期（Asia/Shanghai），不填未来时间：
