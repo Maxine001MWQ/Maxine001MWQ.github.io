@@ -73,6 +73,8 @@ PPT 做得差不多了：逻辑顺，版式也漂亮，你正要合上电脑。�
 ## 04 7 款 Gamma 替代方案逐个看
 ### 1. NoteGPT AI Agent
 
+![NoteGPT AI Slides 创建界面，展示提示词输入、页数、画面比例、文字量设置和演示模板]({{ '/assets/images/posts/best-gamma-alternatives-2027/notegpt-ai-agent.jpg' | relative_url }})
+
 如果你手里的起点是现成材料——一份文档、一篇文章或一堆笔记，可以试试 [NoteGPT AI Agent](https://notegpt.io/ai-agent)。
 
 它的官方页面提供 AI Slides 入口，并强调按目标规划任务、调用工具和整理内容的工作方式。做演示时，可以先说明听众、主题、页数与核心结论，再围绕大纲逐步调整。
@@ -84,6 +86,9 @@ PPT 做得差不多了：逻辑顺，版式也漂亮，你正要合上电脑。�
 **上手前先确认：** 当前 AI Slides 功能支持的输入与导出格式，以及下载后文本、图形和图表的可编辑程度。先用短样例验证，再投入正式项目。
 
 ### 2. Plus AI
+
+![Plus AI 的提示词生成、文件上传和幻灯片修改功能展示]({{ '/assets/images/posts/best-gamma-alternatives-2027/plus-ai.png' | relative_url }})
+
 如果你已经明确幻灯片最后要放在哪个编辑器里，Plus AI 是顺理成章的选择。
 
 它跑在 PPT 和 Google Slides 里，能生成整份演示、插入单页，也能重写和重排内容。
@@ -97,6 +102,9 @@ PPT 做得差不多了：逻辑顺，版式也漂亮，你正要合上电脑。�
 如果反复修改和多人协作跟初次生成同样重要，Plus AI 值得优先排进候选名单。
 
 ### 3. Microsoft Copilot
+
+![Microsoft Copilot 工作助手页面，展示对话、搜索和 AI 创作入口]({{ '/assets/images/posts/best-gamma-alternatives-2027/microsoft-copilot.png' | relative_url }})
+
 长期在 Microsoft 365 里办公的人，Copilot 是很自然的选项。
 
 它能在 PPT 里帮你创建和打磨幻灯片。微软官方也建议：想沿用公司既有的版式和样式，最好从组织模板起步。
@@ -110,6 +118,9 @@ PPT 做得差不多了：逻辑顺，版式也漂亮，你正要合上电脑。�
 它之所以能出现在这份名单里，是因为待在熟悉的环境里，交接成本确实更低。但这不意味着可以省掉审核——AI 生成的表述、数字和页面结构，还是得自己过一遍。
 
 ### 4. Canva
+
+![Canva AI 设计入口，包含社交媒体图片与专业演示文稿选项]({{ '/assets/images/posts/best-gamma-alternatives-2027/canva.png' | relative_url }})
+
 如果 PPT 只是一个更大的视觉项目里的一环，Canva 会很有吸引力。
 
 比如你要办一场线上分享：需要一套演示稿、配套的宣传图，还有会后发的手册。这种情况下，做 PPT 只占工作的一小部分。
@@ -125,6 +136,9 @@ Canva 把 AI 演示工具和可视化编辑环境放在一起，也支持导出 
 顺便说一句：观众先看到的是观点清不清楚，而不是你第六次折腾字体。
 
 ### 5. Beautiful.ai
+
+![Beautiful.ai 演示文稿工作台，展示 AI 创建入口和商务模板]({{ '/assets/images/posts/best-gamma-alternatives-2027/beautiful-ai.png' | relative_url }})
+
 如果你的痛点长期是"版式总是做不统一"，可以看看 Beautiful.ai。
 
 它的工作流强调自动设计和可自定义的页面结构，同时支持 PPT 的导入与导出。
@@ -140,6 +154,9 @@ Canva 把 AI 演示工具和可视化编辑环境放在一起，也支持导出 
 一张复杂的对比表能不能排好，才真正决定工具留不留得下来。
 
 ### 6. Presentations.AI
+
+![Presentations.AI 首页，支持输入主题、笔记或文档来创建演示文稿]({{ '/assets/images/posts/best-gamma-alternatives-2027/presentations-ai.png' | relative_url }})
+
 Presentations.AI 提供了另一条做商务演示的路径。
 
 官方列出的能力包括：从 PDF、Word、PPT 文件生成幻灯片，并原生支持导出可编辑的 PPT。
@@ -153,6 +170,9 @@ Presentations.AI 提供了另一条做商务演示的路径。
 如果你经常做的工作正好匹配它的文档生成和品牌能力，这款值得留一个位置。
 
 ### 7. Slidesgo
+
+![Slidesgo 演示生成页面，展示主题输入框和模板推荐]({{ '/assets/images/posts/best-gamma-alternatives-2027/slidesgo.png' | relative_url }})
+
 Slidesgo 走的是模板路线。
 
 输入主题，调整内容和风格，下载可编辑的 PPTX。生成和下载都需要先注册账号，视觉风格相对现成，自定义的余地也比较有限。
