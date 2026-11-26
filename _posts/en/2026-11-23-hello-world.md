@@ -2,7 +2,7 @@
 layout: post
 title: "Hello, and welcome to my blog"
 description: "A place to keep learning notes, useful discoveries, and lessons from practice."
-date: 2026-11-25 00:00:00 +0800
+date: 2026-11-23 00:00:00 +0800
 lang: en
 translation_key: hello-world
 permalink: /en/posts/hello-world/
@@ -10,7 +10,12 @@ categories: [reflections]
 tags: [writing]
 source_lang: zh-CN
 translated_from_revision: "2026-11-18-original"
+image: /assets/images/posts/hello-world/cover.png
+image_alt: "An open notebook, a red pencil, and a growing plant represent the beginning of a learning and writing practice."
 ---
+
+![An open notebook, a red pencil, and a growing plant represent the beginning of a learning and writing practice.]({{ '/assets/images/posts/hello-world/cover.png' | relative_url }})
+
 This is the first post on this blog, and the beginning of something new.
 
 I’ll use this space to collect ideas worth keeping, experiences with useful tools, and lessons learned along the way.

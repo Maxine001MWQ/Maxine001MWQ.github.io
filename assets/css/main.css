@@ -470,6 +470,7 @@ h3 {
   gap:24px;
 }
 .post-card {
+  position:relative;
   background:white;
   border:1px solid var(--color-border);
   border-radius:16px;
@@ -478,6 +479,19 @@ h3 {
 }
 .post-card:hover {
   border-color:#d4a3ac;
+}
+.card-link::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+}
+.card-link:focus-visible {
+  outline:none;
+}
+.card-link:focus-visible::after {
+  outline:3px solid var(--color-brand-strong);
+  outline-offset:-3px;
 }
 .card-content {
   padding:28px;
